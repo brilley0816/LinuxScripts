@@ -11,3 +11,15 @@ cat /etc/redhat-release
 #change the file or directory name
 mv filename newfilename
 mv dirname newdirname
+
+
+
+#ssh related
+ssh-keygen -t rsa -C 'yanbrilley@gmail.com'
+ssh-copy-id username@address
+
+# sftp can build based on ssh services so that they can use the same port
+
+
+# process related 
+netstat -nlt | grep 22

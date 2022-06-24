@@ -1,0 +1,7 @@
+[user]
+	name = brilley0816
+	email = yanbrilley@gmail.com
+[credential]
+	helper = store
+[core]
+	longpaths = true

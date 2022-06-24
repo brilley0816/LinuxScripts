@@ -1,0 +1,33 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+#Config for nvim
+export EDITOR=nvim
+
+alias vi="nvim"
+
+# Java environment for user specific now
+alias jdk11="sh ~/brilley_scripts/jdk11.sh; export JAVA_HOME='/usr/local/java/openjdk-11/jdk-11'"
+alias jdk17="sh ~/brilley_scripts/jdk17.sh; export JAVA_HOME='/usr/local/java/openjdk-17/jdk-17'"
+alias jdk8="sh ~/brilley_scripts/jdk8.sh; export JAVA_HOME='/usr/local/java/openjdk-8/jdk8'"
+
+#JAVA_PATH=$(readlink -f /usr/bin/java)
+#JAVA_HOME=${JAVA_PATH%/bin*}
+
+export JAVA_HOME="/usr/local/java/openjdk-11/jdk-11"
+#echo "the bashrc has reload~"

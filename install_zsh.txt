@@ -1,0 +1,10 @@
+tar -xzf ncurses-*.tar.gz
+cd ncruse-*
+./configure --prefix=/usr CXXFLAGS="-fPIC" CFLAGS="-fPIC"
+make 
+sudo make install
+
+tar -xJf zsh-*.tar.xz
+cd zsh-*
+./configure --prefix=/usr/local CPPFLAGS="-I/usr/loca/include" LDFLAGS="-L/usr/loca/lib"
+make install
