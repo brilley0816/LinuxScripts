@@ -4,17 +4,15 @@ scp -r install_oh-my-zsh.sh lighthouse@43.142.117.135:/home/lighthouse/brilley_s
 
 
 # get the version of the ubuntu centos
-lsb_release -a
-uname -a 
-cat /etc/redhat-release
+lsb_release -a uname -a cat /etc/redhat-release 
 
-#change the file or directory name
+# change the file or directory name
 mv filename newfilename
 mv dirname newdirname
 
 
 
-#ssh related
+# ssh related
 ssh-keygen -t rsa -C 'yanbrilley@gmail.com'
 ssh-copy-id username@address
 
@@ -23,3 +21,22 @@ ssh-copy-id username@address
 
 # process related 
 netstat -nlt | grep 22
+
+
+# git related 
+git config --global 
+git config -l
+
+
+# system config
+cat /etc/hosts
+cat /etc/sudoers
+cat /etc/shells
+systemctl status appname
+systemctl restart appname
+systemctl start appname
+systemctl enable appname
+
+# mysql related
+
+
