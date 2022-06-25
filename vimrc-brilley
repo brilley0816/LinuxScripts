@@ -1,0 +1,31 @@
+let mapleader=" "
+
+syntax on
+
+set number
+set norelativenumber
+set cursorline
+set wrap
+set showcmd
+set wildmenu
+
+set hlsearch 
+set incsearch
+exec "nohlsearch"
+set ignorecase
+set smartcase
+
+map S :w<CR>
+map Q :q<CR>
+map R :source $MYVIMRC<CR>
+
+noremap U 6k
+noremap E 6j
+noremap <LEADER><CR> :nohlsearch<CR>
+noremap <LEADER>h :split<CR>
+noremap <LEADER>v :vsplit<CR>
+
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+call plug#end()
+
