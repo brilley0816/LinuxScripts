@@ -1,6 +1,7 @@
 let mapleader=" "
 
 syntax on
+set encoding=utf-8
 
 set number
 set norelativenumber
@@ -15,17 +16,54 @@ exec "nohlsearch"
 set ignorecase
 set smartcase
 
+set tabstop=3
+
+map s :<nop>
 map S :w<CR>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
 
+map sl :set splitright<CR>:vsplit<CR>
+map sh :set nosplitright<CR>:vsplit<CR>
+map sj :set splitbelow<CR>:split<CR>
+map sh :set nosplitbelow<CR>:split<CR>
+
+map 11 :b1<CR>
+map 22 :b2<CR>
+map 33 :b3<CR>
+
 noremap U 6k
 noremap E 6j
 noremap <LEADER><CR> :nohlsearch<CR>
-noremap <LEADER>h :split<CR>
-noremap <LEADER>v :vsplit<CR>
+noremap <LEADER>l <C-w>l
+noremap <LEADER>h <C-w>h
+noremap <LEADER>j <C-w>j
+noremap <LEADER>k <C-w>k
+noremap <LEADER><Space> <Esc>
 
+" insert mode shortcut
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
+Plug 'vim-scripts/vim-airline-master'
+Plug 'vim-scripts/nerdtree-master'
+Plug 'vim-scripts/AutoComplPop-master'
 call plug#end()
 
+"airline状态栏配置
+let g:airline_powerline_fonts = 1
+"打开tabline功能,方便查看Buffer和切换,省去了minibufexpl插件
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" snazzy beaufify.
+colorscheme snazzy
+
+" config the nerdTree
+noremap <LEADER>n :NERDTreeToggle<CR>
+
+" config AutoComplPop
+map <TAB> <C-p>
