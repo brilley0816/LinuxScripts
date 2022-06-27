@@ -39,4 +39,17 @@ systemctl enable appname
 
 # mysql related
 
+# memory and cpu related
+ps -l
+C - Cpu SZ Memory size
+ps -ef | grep sshd
+
+top #like task manager in windows10  dynamic
+top -p PID-Number
+free 
+
+df # show the usage of disk
+df -h
+
+
 
