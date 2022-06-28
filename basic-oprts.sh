@@ -51,5 +51,14 @@ free
 df # show the usage of disk
 df -h
 
+## mysql related
+#show users
+mysql -u root -p -e "select user, host from mysql.user;"
+
+## nginx related 
+# reload the config file and restart
+sudo nginx -s reload
+# -s mean signal stop start 
+sudo nginx -s stop  
 
 
