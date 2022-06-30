@@ -61,4 +61,6 @@ sudo nginx -s reload
 # -s mean signal stop start 
 sudo nginx -s stop  
 
+# start a java project in daemon
+sudo nohup java -jar music-webchat-brilley-0.0.1-SNAPSHOT.jar &
 

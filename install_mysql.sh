@@ -17,8 +17,27 @@ sudo cat /var/log/mysqld.log | grep password
 mysql -u root -p
 
 # set new password in mysql
-
+alter user 'root'@'locahost' identified by 'password';
+# if not accord to policy, set the complex password;
+ show variables like 'validate_password%';
+ set global validate_password.policy=low;
 
 # show the users
 mysql -u root -p -e "select user, host from mysql.user;"
 
+# login in 
+mysql -u username -p -h host.address
+
+# install problem 
+yum install -y libio
+
+# mysqld.service: Main process exited, code=exited, status=1/FAILURE'i
+
+sudo cat /var/log/mysqld.log
+#solution one
+change the config.file
+sudo vim /etc/my.cnf
+
+#solution two
+sudo rm -rf /var/lib/mysql
+restart 
