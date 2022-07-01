@@ -55,4 +55,4 @@ sudo mysqldump -u root -p tp_music > tp_music-0629.sql
 ## in create database first
 mysql -u root -p dbname < filename.sql
 mysql > source jj.sql
-
+master_log_file='mysql-bin.000003',

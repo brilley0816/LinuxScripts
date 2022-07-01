@@ -64,3 +64,10 @@ sudo nginx -s stop
 # start a java project in daemon
 sudo nohup java -jar music-webchat-brilley-0.0.1-SNAPSHOT.jar &
 
+# modify the time zone
+date
+date -R ## 查看时区
+
+## 修改为+8时区
+cp /usr/shar/zoneinfo/Asia/Chongqing /etc/localtime
+

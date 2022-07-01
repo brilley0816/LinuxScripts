@@ -21,6 +21,7 @@ alter user 'root'@'locahost' identified by 'password';
 # if not accord to policy, set the complex password;
  show variables like 'validate_password%';
  set global validate_password.policy=low;
+ set global validate_password.length = 4;
 
 # show the users
 mysql -u root -p -e "select user, host from mysql.user;"
