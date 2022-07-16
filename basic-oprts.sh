@@ -1,4 +1,4 @@
-# copy files from remote servers
+
 scp -r username@address:/home/usrname/seer/* ./
 scp -r install_oh-my-zsh.sh lighthouse@43.142.117.135:/home/lighthouse/brilley_scripts/
 
@@ -70,4 +70,8 @@ date -R ## 查看时区
 
 ## 修改为+8时区
 cp /usr/shar/zoneinfo/Asia/Chongqing /etc/localtime
+
+# how to add a user in windows10
+net user username password /add
+## win+R netplwiz to show users
 
