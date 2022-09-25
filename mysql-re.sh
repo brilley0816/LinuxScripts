@@ -56,3 +56,15 @@ sudo mysqldump -u root -p tp_music > tp_music-0629.sql
 mysql -u root -p dbname < filename.sql
 mysql > source jj.sql
 master_log_file='mysql-bin.000003',
+
+
+# cast and convert the stirng type
+.. from bird_images order by cast(sorting_id as INT) limit 5;
+.. order by convert(gender_age, char) limit 5;
+
+# compress and uncompress
+insert into humans 
+() values (, curdate(), compress("the compressed information"));
+select uncompress(birding_background) as Background;
+
+
